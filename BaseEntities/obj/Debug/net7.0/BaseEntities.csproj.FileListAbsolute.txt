@@ -1,0 +1,14 @@
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\bin\Debug\net7.0\BaseEntities.deps.json
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\bin\Debug\net7.0\BaseEntities.runtimeconfig.json
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\bin\Debug\net7.0\BaseEntities.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\bin\Debug\net7.0\BaseEntities.pdb
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.csproj.AssemblyReference.cache
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.AssemblyInfoInputs.cache
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.AssemblyInfo.cs
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.csproj.CoreCompileInputs.cache
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\refint\BaseEntities.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.pdb
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\BaseEntities.genruntimeconfig.cache
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\BaseEntities\obj\Debug\net7.0\ref\BaseEntities.dll
