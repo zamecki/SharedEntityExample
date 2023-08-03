@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BaseEntities;
@@ -9,10 +10,14 @@ public class TestController<TUserAccount, TPersonProfile> : ControllerBase
     where TUserAccount : CommonUserAccount<TUserAccount, TPersonProfile>
 {
     private readonly ICommonDbContext<TUserAccount, TPersonProfile> dbContext;
+    private readonly UserManager<TUserAccount> userManager;
+    private readonly SignInManager<TUserAccount> signInManager;
 
-    public TestController(ICommonDbContext<TUserAccount, TPersonProfile> dbContext)
+    public TestController(ICommonDbContext<TUserAccount, TPersonProfile> dbContext, UserManager<TUserAccount> userManager, SignInManager<TUserAccount> signInManager)
     {
         this.dbContext = dbContext;
+        this.userManager = userManager;
+        this.signInManager = signInManager;
     }
 
     [HttpGet]
