@@ -12,19 +12,19 @@ var result = dbContext.PeopleProfiles
 
 public class PersonProfile : CommonPersonProfile
 {
-    public new UserAccount? UserAccount => (UserAccount?)base.UserAccount;
+    public UserAccount? UserAccount => (UserAccount?)base.CommonUserAccount;
     public string? Message { get; set; }
 }
 
 public class UserAccount : CommonUserAccount
 {
-    public Guid? EmployeeId { get; set; }
-    public virtual Employee? Employee { get; set; }
-    public new virtual PersonProfile PersonProfile => (PersonProfile)base.PersonProfile;
+    public string? EmployeeId { get; set; }
+    public Employee? Employee { get; set; }
+    public PersonProfile PersonProfile => (PersonProfile)base.CommonPersonProfile;
 }
 public class Employee : IBaseEntity
 {
-    public Guid Id { get; set; }
+    public string Id { get; set; }
     public string? EmployeeNumber { get; set; }
 }
 

@@ -68,3 +68,8 @@ C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\ob
 C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\obj\Debug\net7.0\SharedEnitityExample.pdb
 C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\obj\Debug\net7.0\SharedEnitityExample.genruntimeconfig.cache
 C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\obj\Debug\net7.0\ref\SharedEnitityExample.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Lucas.Zamecki\source\repos\SharedEnitityExample\SharedEnitityExample\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
