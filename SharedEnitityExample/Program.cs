@@ -1,13 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BaseEntities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
-
-
-using var dbContext = new ExampleDbContext();
+var services = new ServiceCollection();
+Configurator.ConfigureServices<ExampleDbContext>(services);
+var serviceProvider = services.BuildServiceProvider();
+var dbContext = serviceProvider.GetRequiredService<IExampleDbContext>();
 var result = dbContext.PeopleProfiles
                         .Include(t => t.UserAccount)
-                            .ThenInclude(t => t.Employee)
+                            .ThenInclude(t => ((UserAccount)t).Employee)
                         .ToList();
 
 public class PersonProfile : CommonPersonProfile
@@ -28,10 +30,23 @@ public class Employee : IBaseEntity
     public string? EmployeeNumber { get; set; }
 }
 
-public class ExampleDbContext : CommonDbContext
+public interface IExampleDbContext : ICommonDbContext
 {
+    public new DbSet<UserAccount> UserAccounts { get; }
+    public new DbSet<PersonProfile> PeopleProfiles { get; }
+    public DbSet<Employee> Employees { get; }
+}
+
+public class ExampleDbContext : CommonDbContext, IExampleDbContext
+{
+    public ExampleDbContext(DbContextOptions options) : base(options)
+    {
+    }
+
     public new DbSet<UserAccount> UserAccounts { get; set; } = default!;
     public new DbSet<PersonProfile> PeopleProfiles { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+
 }
 
 
