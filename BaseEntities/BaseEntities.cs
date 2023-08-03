@@ -1,8 +1,19 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
+using System.Security.Principal;
 
 namespace BaseEntities;
+
+public class Notification<TUserAccount, TPersonProfile> : IBaseEntity
+        where TPersonProfile : CommonPersonProfile<TPersonProfile, TUserAccount>
+        where TUserAccount : CommonUserAccount<TUserAccount, TPersonProfile>
+{
+    public string Id { get; set; }
+    public virtual TUserAccount? UserAccount { get; protected set; } = default!;
+}
+
 public interface IBaseEntity
 {
     public string Id { get; }
@@ -15,7 +26,6 @@ public abstract class CommonPersonProfile<TPersonProfile, TUserAccount>: IBaseEn
     public string? UserAccountId { get; set; }
     public virtual TUserAccount? UserAccount  { get; protected set; } = default!;
 }
-
 
 public abstract class CommonUserAccount<TUserAccount, TPersonProfile> : IdentityUser, IBaseEntity
     where TPersonProfile : CommonPersonProfile<TPersonProfile, TUserAccount>
@@ -46,6 +56,6 @@ public class CommonDbContext<TUserAccount, TPersonProfile> : IdentityDbContext<T
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder);        
+        base.OnModelCreating(builder);
     }
 }

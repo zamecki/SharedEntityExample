@@ -23,6 +23,9 @@ public class TestController<TUserAccount, TPersonProfile> : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
+        var notification = new Notification<TUserAccount, TPersonProfile>();
+        
+
         var t = dbContext.PeopleProfiles
          .Include(t => t.UserAccount).ToList();
         return Ok();
